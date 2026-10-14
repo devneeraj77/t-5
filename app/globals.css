@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #faf8f5;
+  --foreground: #1c1917;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0c0e12;
+    --foreground: #f3f4f6;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* Green highlight requirement from FreeCodeCamp user stories */
+.highlight {
+  color: #047857;
+  background-color: #ecfdf5;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: #10b981;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  padding: 0.05rem 0.25rem;
+  border-radius: 0.25rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  display: inline-block;
+  transition: all 0.2s ease-in-out;
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight {
+    color: #34d399;
+    background-color: rgba(6, 78, 59, 0.35);
+    border-color: rgba(52, 211, 153, 0.4);
+    text-decoration-color: #34d399;
+  }
+}
+
+.highlight:hover {
+  background-color: #d1fae5;
+  transform: translateY(-1px);
+}
+
+@media (prefers-color-scheme: dark) {
+  .highlight:hover {
+    background-color: rgba(6, 78, 59, 0.6);
+  }
+}
