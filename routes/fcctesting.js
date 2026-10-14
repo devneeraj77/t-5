@@ -64,6 +64,13 @@ module.exports = function (app) {
     res.json({status: 'unavailable'});
   },
   function(req, res, next){
+    if(!runner.report) {
+      try {
+        if (fs.existsSync('./test-report.json')) {
+          runner.report = JSON.parse(fs.readFileSync('./test-report.json', 'utf8'));
+        }
+      } catch (e) {}
+    }
     if(!runner.report) return next();
     res.json(testFilter(runner.report, req.query.type, req.query.n));
   },

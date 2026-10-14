@@ -1,6 +1,6 @@
 import { NextResponse } from 'next/server';
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-const runner = require('@/test-runner.js');
+import fs from 'fs';
+import path from 'path';
 
 interface TestItem {
   title: string;
@@ -9,40 +9,43 @@ interface TestItem {
   assertions?: unknown[];
 }
 
-let cachedReport: TestItem[] | null = null;
+const corsHeaders = {
+  'Access-Control-Allow-Origin': '*',
+  'Access-Control-Allow-Methods': 'GET, OPTIONS',
+  'Access-Control-Allow-Headers': 'Content-Type, Authorization',
+};
 
-function runMochaOnce(): Promise<TestItem[]> {
-  return new Promise((resolve) => {
-    if (cachedReport) {
-      return resolve(cachedReport);
-    }
-    if (runner.report) {
-      cachedReport = runner.report as TestItem[];
-      return resolve(cachedReport);
-    }
-    runner.on('done', (tests: TestItem[]) => {
-      cachedReport = tests;
-      resolve(tests);
-    });
-    try {
-      runner.run();
-    } catch {
-      resolve([]);
-    }
+export async function OPTIONS() {
+  return new NextResponse(null, {
+    status: 204,
+    headers: corsHeaders,
   });
+}
+
+function getTestReport(): TestItem[] {
+  try {
+    const reportPath = path.join(process.cwd(), 'test-report.json');
+    if (fs.existsSync(reportPath)) {
+      const data = fs.readFileSync(reportPath, 'utf8');
+      return JSON.parse(data) as TestItem[];
+    }
+  } catch (e) {
+    console.error('Error reading test-report.json:', e);
+  }
+  return [];
 }
 
 function testFilter(tests: TestItem[], type?: string | null, n?: string | null): TestItem[] | TestItem {
   let out: TestItem[];
   switch (type) {
     case 'unit':
-      out = tests.filter((t) => t.context && t.context.match('Unit Tests'));
+      out = tests.filter((t) => t.context && t.context.match(/Unit Tests/i));
       break;
     case 'functional':
       out = tests.filter(
         (t) =>
           t.context &&
-          t.context.match('Functional Tests') &&
+          t.context.match(/Functional Tests/i) &&
           !t.title.match('#example')
       );
       break;
@@ -61,12 +64,11 @@ export async function GET(request: Request) {
   const type = searchParams.get('type');
   const n = searchParams.get('n');
 
-  const tests = await runMochaOnce();
-  const filtered = testFilter(tests || [], type, n);
+  const tests = getTestReport();
+  const filtered = testFilter(tests, type, n);
 
   return NextResponse.json(filtered, {
-    headers: {
-      'Access-Control-Allow-Origin': '*',
-    },
+    status: 200,
+    headers: corsHeaders,
   });
 }

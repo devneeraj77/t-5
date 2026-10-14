@@ -1,0 +1,478 @@
+[
+  {
+    "title": "Translate Mangoes are my favorite fruit. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Mangoes are my favorite fruit.', 'american-to-british')",
+          "'Mangoes are my <span class=\"highlight\">favourite</span> fruit.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate I ate yogurt for breakfast. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('I ate yogurt for breakfast.', 'american-to-british')",
+          "'I ate <span class=\"highlight\">yoghurt</span> for breakfast.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate We had a party at my friend's condo. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate(\"We had a party at my friend's condo.\", 'american-to-british')",
+          "'We had a party at my friend\\'s <span class=\"highlight\">flat</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Can you toss this in the trashcan for me? to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Can you toss this in the trashcan for me?', 'american-to-british')",
+          "'Can you toss this in the <span class=\"highlight\">bin</span> for me?'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate The parking lot was full. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('The parking lot was full.', 'american-to-british')",
+          "'The <span class=\"highlight\">car park</span> was full.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Like a high tech Rube Goldberg machine. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Like a high tech Rube Goldberg machine.', 'american-to-british')",
+          "'Like a high tech <span class=\"highlight\">Heath Robinson device</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate To play hooky means to skip class or work. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('To play hooky means to skip class or work.', 'american-to-british')",
+          "'To <span class=\"highlight\">bunk off</span> means to skip class or work.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate No Mr. Bond, I expect you to die. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('No Mr. Bond, I expect you to die.', 'american-to-british')",
+          "'No <span class=\"highlight\">Mr</span> Bond, I expect you to die.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Dr. Grosh will see you now. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Dr. Grosh will see you now.', 'american-to-british')",
+          "'<span class=\"highlight\">Dr</span> Grosh will see you now.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Lunch is at 12:15 today. to British English",
+    "context": " -> Unit Tests -> Translate to British English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Lunch is at 12:15 today.', 'american-to-british')",
+          "'Lunch is at <span class=\"highlight\">12.15</span> today.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate We watched the footie match for a while. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('We watched the footie match for a while.', 'british-to-american')",
+          "'We watched the <span class=\"highlight\">soccer</span> match for a while.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Paracetamol takes up to an hour to work. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Paracetamol takes up to an hour to work.', 'british-to-american')",
+          "'<span class=\"highlight\">Tylenol</span> takes up to an hour to work.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate First, caramelise the onions. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('First, caramelise the onions.', 'british-to-american')",
+          "'First, <span class=\"highlight\">caramelize</span> the onions.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate I spent the bank holiday at the funfair. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('I spent the bank holiday at the funfair.', 'british-to-american')",
+          "'I spent the <span class=\"highlight\">public holiday</span> at the <span class=\"highlight\">carnival</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate I had a bicky then went to the chippy. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('I had a bicky then went to the chippy.', 'british-to-american')",
+          "'I had a <span class=\"highlight\">cookie</span> then went to the <span class=\"highlight\">fish-and-chip shop</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate I've just got bits and bobs in my bum bag. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate(\"I've just got bits and bobs in my bum bag.\", 'british-to-american')",
+          "'I\\'ve just got <span class=\"highlight\">odds and ends</span> in my <span class=\"highlight\">fanny pack</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate The car boot sale at Boxted Airfield was called off. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('The car boot sale at Boxted Airfield was called off.', 'british-to-american')",
+          "'The <span class=\"highlight\">swap meet</span> at Boxted Airfield was called off.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Have you met Mrs Kalyani? to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Have you met Mrs Kalyani?', 'british-to-american')",
+          "'Have you met <span class=\"highlight\">Mrs.</span> Kalyani?'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Prof Joyner of King's College, London. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate(\"Prof Joyner of King's College, London.\", 'british-to-american')",
+          "'<span class=\"highlight\">Prof.</span> Joyner of King\\'s College, London.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translate Tea time is usually around 4 or 4.30. to American English",
+    "context": " -> Unit Tests -> Translate to American English",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Tea time is usually around 4 or 4.30.', 'british-to-american')",
+          "'Tea time is usually around 4 or <span class=\"highlight\">4:30</span>.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Highlight translation in Mangoes are my favorite fruit.",
+    "context": " -> Unit Tests -> Highlight translation",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Mangoes are my favorite fruit.', 'american-to-british')",
+          "'Mangoes are my <span class=\"highlight\">favourite</span> fruit.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Highlight translation in I ate yogurt for breakfast.",
+    "context": " -> Unit Tests -> Highlight translation",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('I ate yogurt for breakfast.', 'american-to-british')",
+          "'I ate <span class=\"highlight\">yoghurt</span> for breakfast.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Highlight translation in We watched the footie match for a while.",
+    "context": " -> Unit Tests -> Highlight translation",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('We watched the footie match for a while.', 'british-to-american')",
+          "'We watched the <span class=\"highlight\">soccer</span> match for a while.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Highlight translation in Paracetamol takes up to an hour to work.",
+    "context": " -> Unit Tests -> Highlight translation",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "translator.translate('Paracetamol takes up to an hour to work.', 'british-to-american')",
+          "'<span class=\"highlight\">Tylenol</span> takes up to an hour to work.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with text and locale fields: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.text",
+          "'Mangoes are my favorite fruit.'"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.translation",
+          "'Mangoes are my <span class=\"highlight\">favourite</span> fruit.'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with text and invalid locale field: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.error",
+          "'Invalid value for locale field'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with missing text field: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.error",
+          "'Required field(s) missing'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with missing locale field: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.error",
+          "'Required field(s) missing'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with empty text: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.error",
+          "'No text to translate'"
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Translation with text that needs no translation: POST request to /api/translate",
+    "context": " -> Functional Tests",
+    "state": "passed",
+    "assertions": [
+      {
+        "method": "equal",
+        "args": [
+          "res.status",
+          "200"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.text",
+          "'Mangoes are my favourite fruit.'"
+        ]
+      },
+      {
+        "method": "equal",
+        "args": [
+          "res.body.translation",
+          "'Everything looks good to me!'"
+        ]
+      }
+    ]
+  }
+]
